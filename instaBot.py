@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import random
+import os
 
 class InstagramBot(object):
     def __init__(self, email, password,comments):
             self.email = email
             self.password = password
-            self.browser = webdriver.Chrome(executable_path= 'chromedriver')
+            self.browser = webdriver.Chrome(executable_path= os.getcwd() + os.path.sep + 'chromedriver')
             self.comments = comments
             
     def login(self):
